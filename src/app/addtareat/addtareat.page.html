@@ -1,0 +1,91 @@
+<ion-header>   
+   
+        <ion-toolbar color="light">
+         
+          <ion-buttons slot="start" (click)="salir()" >
+            <ion-button> 
+                  <ion-icon   slot="start" name="arrow-round-back"></ion-icon>  
+                </ion-button>
+                </ion-buttons>
+          <ion-buttons slot="end">  
+            <ion-button slot="end" fill="outline" color="tertiary">Guadar</ion-button>
+          
+          </ion-buttons>
+          </ion-toolbar>
+    
+    
+</ion-header>
+
+<div class="fondo">
+    
+    <div class="form3"> 
+      <ion-toolbar> 
+        <h1>Nueva Tarea </h1>
+      </ion-toolbar>
+      </div>
+  
+    </div>
+
+<ion-content class="fondo">
+   
+<div class="form2">
+    
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Titulo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Descripcion"></ion-input>
+      </ion-item>
+      
+      <ion-item-divider color="light">
+        <ion-label>Responsable:</ion-label>
+      </ion-item-divider>
+      <ion-item>
+          <ion-icon  slot="start" name="person" color="tertiary"></ion-icon>
+        <ion-input ></ion-input>
+      </ion-item>
+      <ion-item-divider color="light">
+        <ion-label>Observadores:</ion-label>
+      </ion-item-divider>
+      <ion-item>
+          <ion-icon  slot="start" name="person" color="tertiary"></ion-icon>
+        <ion-input ></ion-input>
+      </ion-item>
+      <ion-item-divider color="light">
+        <ion-label>Participantes:</ion-label>
+      </ion-item-divider>
+      <ion-item>
+          <ion-icon  slot="start" name="person" color="tertiary"></ion-icon>
+        <ion-input ></ion-input>
+      </ion-item>
+      <ion-item-divider color="light">
+        <ion-label>Archivos:</ion-label>
+      </ion-item-divider>
+      <ion-item>
+          <ion-icon  slot="start" name="attach" color="tertiary"></ion-icon>
+          <ion-input ></ion-input>
+        </ion-item>
+      <ion-item-divider color="light"></ion-item-divider>
+      <ion-item>
+        <ion-label>Fecha Inicio</ion-label>
+        <ion-datetime value="1990-02-19" placeholder="Seleccionar"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora Inicio</ion-label>
+        <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha Fin</ion-label>
+        <ion-datetime value="1990-02-20" placeholder="Seleccionar"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Hora Fin</ion-label>
+          <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1996-02-19T07:43Z"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+
+</div>
+</ion-content>
+

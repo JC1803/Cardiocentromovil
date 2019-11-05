@@ -1,0 +1,14 @@
+{
+  "name": "inicio",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+
+  "proxies": [
+    {
+      "path": "/Usuarios",
+      "proxyUrl": "http://localhost:8000/Usuarios"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+            <ion-row>
+                <ion-col size="4" class="centrar">
+                   
+                           <ion-title> REUNION</ion-title>
+                </ion-col>
+                <ion-col size="8">
+                    <ion-searchbar mode="ios" animated  showCancelButton="focus" cancelButtonText="X"></ion-searchbar>
+                </ion-col>
+              </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>  
+        <ion-label color="medium">Estado</ion-label>
+        <ion-select placeholder="Todas" [(ngModel)]="tipousuario" okText="Ok" cancelText="Cancelar" name="estadotarea">
+          <ion-select-option value="1">Vigentes</ion-select-option>
+          <ion-select-option value="2">Terminadas</ion-select-option>
+          <ion-select-option value="3">Todas</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="form"> 
+          <h2> Reuniones </h2> 
+      </div>
+
+      <ion-list>
+          <ion-item class="bord"  (click)="verreunions()">
+              <ion-icon slot="start" name="paper-plane"></ion-icon>
+              <ion-label class="ion-text-wrap">
+                  <ion-text color="dark">
+                  <ion-label> 
+                      <h2>Entrega de bienes </h2>  
+                    </ion-label>
+                  </ion-text>
+                  <p class="letra"> <b> Fecha: </b> 10/10/2019 10:00 <b>Lugar:</b>Oficina 3 </p>
+                </ion-label>
+                <ion-note slot="end" color="warning">Vigente</ion-note>
+         </ion-item>
+          </ion-list>
+</ion-content>

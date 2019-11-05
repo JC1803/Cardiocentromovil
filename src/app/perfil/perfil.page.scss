@@ -1,0 +1,63 @@
+.menu1{
+    padding: 5px 10px 10px;
+    background-image: url('/assets/fondo3.jpg');
+    background-size: cover;
+    height: 25%;
+    color: rgb(255, 255, 255);
+   
+}
+
+.iavatar  {     
+    width:200% !important;  
+    height : 200% !important;  
+    max-width: 80px !important;  //any size
+    max-height: 80px !important; //any size 
+    //padding: .5em;
+    }
+
+.texto {
+        text-align: center;
+        ion-label{
+          font-size:14px;
+        }
+
+    }
+
+   
+    .fondo {
+      color: rgb(207, 38, 38);
+    }
+
+    .chipp {
+      padding: 16px 30px;
+      margin: 0 auto;
+      
+    }
+
+    .center {
+      text-align: center;
+      ion-label{
+        color: darkblue;
+        font-size:12px;
+      }
+      ion-icon{
+        font-size:14px;
+      }
+      
+    }
+  .center2 {
+    height: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+  
+  }
+
+  .fuente {
+    ion-label {
+      font-size:14px;
+    }
+  p {
+    font-size:12px;
+  }
+  }

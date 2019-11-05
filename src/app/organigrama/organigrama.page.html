@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Organigrama</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="fondo">
+    <div text-center class="bordes">
+        <img src="/assets/logo1.png" alt="">
+      </div>
+   
+    <ion-card  *ngFor ="let ar of areas"> 
+      <ion-item button  (click)="ar.open = !ar.open" [class.parent-active]="ar.open"  detail="false" class="organ">
+        <ion-icon name="business" slot="start"></ion-icon>
+        <ion-icon slot="end" name="arrow-dropright" *ngIf="!ar.open"></ion-icon>
+        <ion-icon slot="end" name="arrow-dropdown" *ngIf="ar.open"></ion-icon>
+        <ion-label>AREA: {{ar.Descripcion }} </ion-label>
+      </ion-item>
+
+      <ion-card-content *ngIf="ar.open"  class="cuerpo">
+        <ion-item *ngFor ="let sub of ar.sub_area " class="letra">
+          <ion-icon name="cube" color="dark" slot="start"></ion-icon>
+          <ion-label> {{ sub.Descripcion}} </ion-label>
+          <ion-button  fill="outline" slot="end" (click)="presentModal(sub.roles)">Ver</ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

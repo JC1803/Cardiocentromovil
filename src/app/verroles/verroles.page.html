@@ -1,0 +1,52 @@
+<div  class="form1"> 
+    <ion-toolbar> 
+      <div class="fd">
+        <ion-row>
+            <ion-col size="2" class="clfondo">
+              <div class="colo"> 
+                <ion-buttons  (click)="closeModal()">
+                    <ion-icon slot="start" name="arrow-round-back"></ion-icon>
+                  </ion-buttons>   
+                </div> 
+        </ion-col>
+            <ion-col size="10"  class="cl">
+                <div class="detalles"> 
+                    <h1>ROLES</h1>
+                  </div>
+            </ion-col>
+           
+          </ion-row>
+
+        </div>
+       
+        </ion-toolbar>
+</div>
+
+<ion-content>
+ 
+  <div padding>
+  <div *ngFor ="let ro of rol"> 
+      
+  <ion-item buttons (click)="ro.open = !ro.open"  class="sub-item2">
+    <ion-icon name="briefcase" color= "dark" slot="start"></ion-icon>
+    <ion-icon slot="end" name="arrow-dropright" *ngIf="!ro.open"></ion-icon>
+    <ion-icon slot="end" name="arrow-dropdown" *ngIf="ro.open"></ion-icon>
+    <ion-label> {{ ro.Descripcion }}</ion-label>
+  </ion-item>
+    
+  <div *ngIf="ro.open">
+      <ion-item *ngFor ="let user of ro.usuario_roles" class="sub-item1">
+         <ion-icon   name="person" class="icon" slot="start"></ion-icon>
+         <ion-label class="margentexto"> {{ user.usuarios.Nombre}} {{ user.usuarios.Apellido }} </ion-label>
+         <ion-buttons class="botones" (click)="perfilModal(user.usuarios, ro.Descripcion)">
+         <ion-button class="bton"> 
+          <ion-icon class="icon3" name="eye" color= "primary" ></ion-icon>
+        </ion-button>
+         </ion-buttons>
+  
+       </ion-item> 
+  </div>
+
+</div>
+</div>
+</ion-content>

@@ -1,0 +1,43 @@
+
+
+<ion-content >
+<div id="div1">
+  <form #form="ngForm" >
+    
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          
+            <div text-center class="espacio">
+                <img src="/assets/logo1.png" alt="">
+              </div>
+          <div text-center class="text">
+            <h1>TASK CONTROL</h1>
+          </div>
+          <div text-center>
+            <h1></h1>
+          </div>
+          <div padding>
+            <ion-item color="light">
+              <ion-input text-center name="email" type="email" placeholder="your@email.com" [(ngModel)]="email"></ion-input>
+            </ion-item>
+            <ion-item color="light">
+              <ion-input border-color="danger" text-center name="password" type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  color="success" type="submit" [disabled]="form.invalid" (click)="prosesLogin()" expand="block">Login</ion-button>
+            
+          </div>
+          <div text-center padding>
+            Si no tienes cuenta, por favor <a routerLink='/register'>
+               registrate</a> primero!
+               </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+  
+  
+</div>
+</ion-content>

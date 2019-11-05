@@ -1,0 +1,93 @@
+
+<div  class="fondo"> 
+  <ion-toolbar color="trans" class="bordes">
+    <ion-buttons class="icon1"  slot="start" (click)="closeModal()">
+        <ion-icon  slot="start" name="arrow-round-back" color="dark"></ion-icon>
+      </ion-buttons>
+     
+    </ion-toolbar>
+</div> 
+
+
+  <ion-content class="fondo">
+    <div class="marco fondo bordes">
+      <ion-row> 
+           <ion-col size="4">
+              <ion-avatar>
+                  <img class="icon" src="/assets/sinfoto.jpg" alt="">
+              </ion-avatar>
+           </ion-col>
+           <ion-col size="8"> 
+              <ion-item >
+                <ion-label class="nombre1">
+                 <p> {{ usuario.Nombre }}</p>
+             <ion-text>  
+                <ion-label class="nombre1"> {{ usuario.Apellido }} </ion-label>
+              </ion-text>
+            </ion-label>
+              </ion-item>
+              <ion-item >
+                  <ion-label class="nombre1">
+                   <p> Cargo </p>
+               <ion-text>  
+                  <ion-label class="nombre1"> {{ rol }} </ion-label>
+                </ion-text>
+              </ion-label>
+                </ion-item>
+            </ion-col>
+      </ion-row>
+    </div>
+    <div class="center fondo bordes" padding> 
+        <h1 class="center">DATOS DEL USUARIO</h1>
+      </div>
+   <div>  
+   <ion-list padding class="fondo bordes">   
+    <ion-item-divider lines="none">
+        <ion-label>Email:</ion-label>
+      </ion-item-divider>
+    <ion-item>
+        <ion-label> {{ usuario.email }} </ion-label>
+    </ion-item>
+    <ion-item-divider lines="none">
+        <ion-label>Direccion:</ion-label>
+      </ion-item-divider>
+    <ion-item>
+        <ion-label> {{ usuario.Direccion }} </ion-label>
+    </ion-item>
+    <ion-item-divider lines="none">
+        <ion-label>Sexo:</ion-label>
+      </ion-item-divider>
+    <ion-item>
+        <ion-label> {{ usuario.Sexo }} </ion-label>
+    </ion-item>
+    <ion-item-divider lines="none">
+        <ion-label>Fecha Nacimiento:</ion-label>
+      </ion-item-divider>
+    <ion-item>
+        <ion-label> {{ usuario.Fecha_Nacimiento }} </ion-label>
+    </ion-item>
+    <ion-item-divider color="trans" lines="none">
+      <ion-label>Social:</ion-label>
+    </ion-item-divider>
+    <ion-item>
+        <ion-icon slot="start" name="logo-facebook" color="dark"></ion-icon>
+      <ion-label> {{ usuario.Facebook }} </ion-label>
+  </ion-item>
+  <ion-item>
+      <ion-icon slot="start" name="logo-twitter" color="dark"></ion-icon>
+    <ion-label>{{ usuario.Twitter }} </ion-label>
+</ion-item>
+<ion-item>
+    <ion-icon slot="start" name="logo-instagram" color="dark"></ion-icon>
+  <ion-label> {{ usuario.Instagram }} </ion-label>
+</ion-item>
+
+<ion-item-divider color="trans" lines="none">
+  <ion-label>Intereses:</ion-label>
+</ion-item-divider>
+<ion-item>
+  <ion-text> {{ usuario.Intereses }} </ion-text>
+</ion-item>
+   </ion-list>
+  </div>
+  </ion-content>

@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar color="trans" class="fond">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+           </ion-buttons> 
+
+    <ion-buttons slot="end">  
+            <ion-button slot="end" fill="outline">Terminar Tarea</ion-button>
+          
+          </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngFor ="let tarea of datos" class="fuente">
+        <ion-item-divider color="light">
+            <ion-icon  slot="start" name="send" color="dark"></ion-icon>
+              <h3 class="center"> <b>{{tarea.Nombre}}</b> </h3>
+         </ion-item-divider>
+
+         <ion-item lines="none" class="taicon">
+               <label> Descripcion: </label>
+               <ion-icon   slot="start" name="list-box" color="dark"></ion-icon>
+               <ion-text>  
+                  <p> 
+                {{ tarea.Descripcion }}
+               </p>
+             </ion-text>
+          </ion-item>
+         <ion-item lines="none" class="taicon"> 
+            <ion-icon  slot="start" name="time" color="dark">
+              </ion-icon>
+              <label> Estado: </label>
+              <p>
+                  {{ tarea.Estado_Tarea }}
+              </p>
+         </ion-item>
+         <ion-item lines="none" class="taicon">
+               <label> Fecha Inicio: </label>
+               <ion-icon   slot="start" name="clock" color=" dark"></ion-icon>
+               <p > {{ tarea.FechaInicio }} {{ tarea.Hora_Inicio }}</p>
+              
+          </ion-item>
+          <ion-item lines="none" class="taicon">
+             <label> Fecha Fin: </label>
+             <ion-icon  slot="start" name="clock" color="dark"></ion-icon>
+             <p > {{ tarea.FechaFin }} {{ tarea.Hora_Fin }}</p>
+          </ion-item>
+          <ion-item-divider color="light">
+             </ion-item-divider>
+         <ion-item lines="none" > 
+            <ion-label class="ion-text-wrap">
+               <ion-text>
+                 <ion-label> <b> Responsable: </b> </ion-label>
+              </ion-text>
+               <p *ngFor = "let res of tarea.responsables">
+                  <ion-icon  slot="start" name="person" color="dark"> </ion-icon>
+                  {{ res.usuario.Nombre }} {{ res.usuario.Apellido }} 
+              </p>
+            </ion-label>
+         </ion-item>
+       
+         <ion-item lines="none" >  
+               <ion-label class="ion-text-wrap">
+                     <ion-text>
+                       <ion-label> <b>Observadores:</b> </ion-label>
+                    </ion-text>
+                     <p *ngFor = "let obs of tarea.observadores">
+                        <ion-icon  slot="start" name="person" color="dark"> </ion-icon>
+                        {{ obs.usuario.Nombre }} {{ obs.usuario.Apellido }} 
+                    </p>
+                  </ion-label>
+                 
+            </ion-item>
+            <ion-item >
+            <ion-label class="ion-text-wrap">
+                  <ion-text>
+                    <ion-label> <b> Participantes:</b>  </ion-label>
+                 </ion-text>
+                  <p *ngFor = "let par of tarea.participantes">
+                     <ion-icon  slot="start" name="person" color="dark"> </ion-icon>
+                     {{ par.usuario.Nombre }} {{ par.usuario.Apellido }} 
+                 </p>
+               </ion-label>
+               </ion-item>
+               
+                   <ion-item-divider color="light">
+                     <ion-label>Archivos:</ion-label>
+                   </ion-item-divider>
+                   <ion-item>
+                       <ion-icon  slot="start" name="attach" color="tertiary"></ion-icon>
+                       <ion-input ></ion-input>
+                    
+                           <ion-button  slot="end" color="light">
+                                Browser
+                           </ion-button>
+                      
+                     </ion-item>
+                     <ion-item lines="none" >  
+                         <ion-button class="butn" color="dark"  > Cargar </ion-button>
+                         </ion-item>
+                   
+                     <ion-item-divider color="light" buttons (click)="open = !open"  class="sub-item2">
+                           <ion-icon slot="end" name="arrow-dropright" *ngIf="!open"></ion-icon>
+                           <ion-icon slot="end" name="arrow-dropdown" *ngIf="open"></ion-icon>
+                           <ion-label>SUBTAREAS</ion-label>
+                         </ion-item-divider>
+    
+     <div *ngIf="open">
+      
+                  <ion-item  *ngFor = "let sub of tarea.sub_tareas" class="bord">
+                        <ion-icon  slot="start" name="send" color="tertiary"></ion-icon>
+                       <ion-label>
+                        <ion-text>
+                       <ion-label> {{ sub.Nombre }}  </ion-label>
+                        </ion-text>  
+                      <p> <b>Estado: </b>{{ sub.Estado_Tarea }} <b>Limite:</b> {{ sub.FechaFin}} </p>
+                      
+                       </ion-label> 
+                        <ion-icon  slot="end" name="eye" color="tertiary"></ion-icon>
+                  </ion-item>
+     
+               </div>
+               
+               <ion-item-divider color="light" buttons (click)="tarea.open = !tarea.open">
+                  <ion-icon slot="end" name="arrow-dropright" *ngIf="!tarea.open"></ion-icon>
+                  <ion-icon slot="end" name="arrow-dropdown" *ngIf="tarea.open"></ion-icon>
+                <ion-label>OBSERVACIONES:</ion-label>
+              </ion-item-divider>
+              <ion-item  *ngIf="tarea.open" lines="none">
+                 
+               
+              </ion-item>
+    </ion-list>
+
+  
+</ion-content>  
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-textarea placeholder="Escribe tu observacion aqui..." ></ion-textarea>
+      <ion-buttons>
+         <ion-button>
+               <ion-icon  slot="end" name="send" color="dark"></ion-icon>
+         </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

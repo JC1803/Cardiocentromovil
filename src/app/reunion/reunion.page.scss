@@ -1,0 +1,48 @@
+.letra {
+    font-size: smaller;
+    line-height: 12px;
+    }
+    
+    .botones {
+        margin: 0px 0px 0px 16px;
+    }
+    .centrar {
+      
+        line-height: 50px;
+        align-items: center;
+      }
+    
+      ion-searchbar {
+        padding: 0px 7px;
+        font-size: 14px;
+     height: 50px;
+       }
+    
+       ion-col{
+        padding: 0px 5px;
+        height: 50px;
+      }
+      ion-title{
+        font-family: menu;
+        padding:0px 5px 0px  ;
+    }
+    
+    .bord{
+      padding-right: 0px;
+      padding-left: 0px;
+    p{
+      color:black;
+      font-size: 10px;
+      display: flexbox;
+      margin: 1px 5px 0px 0px;
+      b{
+        font-size: 10px;
+      }
+    }
+    }
+    .form{
+      padding: 0px 40px 0px;
+      text-align: center;
+      font-family: serif;
+    }
+    

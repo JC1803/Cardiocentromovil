@@ -1,0 +1,89 @@
+.detalles {
+    padding: 5px 55px 0px 0px;
+    text-align: center;
+    background-color:#1a83c8;
+    color: aliceblue;
+    --ion-background-color: #1a83c8;
+    h1{
+     margin: 10px 0px;
+    }
+   
+}
+.botones {
+    margin: 0px 0px 0px 0px;
+    padding-right: 0px;
+}
+.fd{
+    background:#1a83c8;
+}
+.margentexto {
+    margin: 10px 0px;
+}
+ .bton { 
+    text-align:center;
+    padding-inline-start: 0px;
+ }
+
+ .icon3 {
+    text-align:center;
+    background: rgb(194, 241, 255);
+    border-radius: 100%;
+}
+
+.sub-item1 {
+    padding-left: 8px;
+    font-size: small;
+    color:#686b72;
+}
+.sub-item2 {
+    padding-right: 0px;
+    font-size: small;
+}
+.icon {
+    color: #7f8693;
+
+ 
+}
+.colo{
+    padding: 10px 0px 0px 7px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color:#1a83c8;
+    color: aliceblue;
+    --ion-background-color: #1a83c8;
+    ion-icon{
+        text-align: center;
+        font-size: 30px;
+    }
+}
+.clfondo {
+ 
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 5px 5px;
+    ion-label {
+        font-size: 15px;
+    }
+  
+}
+.cl {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px 5px 0px;
+}
+
+
+.sc-ion-modal-ios-h {
+    --background:#1a83c8;
+}
+.but {
+  height: 100%;
+  margin: 0px 0px 0px 0px;
+}
+
+.my-custom-modal-css .modal-wrapper {
+    height: 100%;
+    top: 0%;
+    width: 100%;
+    position: absolute; 
+    display: block;  
+ }

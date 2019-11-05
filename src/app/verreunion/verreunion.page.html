@@ -1,0 +1,102 @@
+<ion-header>
+    <ion-toolbar color="trans" class="fond">
+      <ion-title></ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+             </ion-buttons> 
+  
+      <ion-buttons slot="end">  
+              <ion-button slot="end" fill="outline">Asistir</ion-button>
+            </ion-buttons>
+            <ion-buttons slot="end">  
+                <ion-button slot="end" fill="outline">Inasistir</ion-button>
+              </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-list class="fuente">
+        <ion-item-divider color="light">
+            <ion-icon  slot="start" name="cafe" color="dark"></ion-icon>
+              <h3 class="center"> <b>ENTREGA DE BIENES</b> </h3>
+         </ion-item-divider>
+  
+         <ion-item lines="none" class="taicon">
+               <label> Descripcion: </label>
+               <ion-icon   slot="start" name="list-box" color="dark"></ion-icon>
+               <ion-text>  
+                  <p> 
+               aqui va la descripcion
+               </p>
+             </ion-text>
+          </ion-item>
+         <ion-item lines="none" class="taicon"> 
+            <ion-icon  slot="start" name="time" color="dark">
+              </ion-icon>
+              <label> Estado: </label>
+              <p>
+                  inasistida / asistida / por asistir 
+              </p>
+         </ion-item>
+         <ion-item lines="none" class="taicon">
+               <label> Fecha Inicio: </label>
+               <ion-icon   slot="start" name="clock" color=" dark"></ion-icon>
+               <p > </p>
+              
+          </ion-item>
+         
+          <ion-item-divider color="light">
+             </ion-item-divider>
+         <ion-item lines="none" > 
+                 <label> <b> Responsable: </b> </label>
+               <p>
+                Maria
+              </p>
+         </ion-item>
+         <ion-item >
+            <ion-label class="ion-text-wrap">
+                  <ion-text>
+                    <ion-label> <b> Participantes:</b>  </ion-label>
+                 </ion-text>
+                 
+                  <p>
+                      <ion-icon  slot="start" name="person" color="dark"> </ion-icon>
+                   Jose 
+                 </p>
+               </ion-label>
+               </ion-item>
+               
+            
+                   <ion-item-divider color="light">
+                     <ion-label>Itinerarios:</ion-label>
+                   </ion-item-divider>
+
+                   <ion-item class="taicon esp">
+                      <p> Vente pa ca </p>
+                      <ion-icon slot="start" name="arrow-dropright-circle" color="dark"></ion-icon>
+                    </ion-item>
+  
+                <ion-item-divider color="light"  buttons (click)="open = !open">
+                    <ion-icon slot="end" name="arrow-dropright" *ngIf="!open"></ion-icon>
+                    <ion-icon slot="end" name="arrow-dropdown" *ngIf="open"></ion-icon>
+                  <ion-label>Opniniones:</ion-label>
+                </ion-item-divider>
+                <ion-item  *ngIf="open" lines="none">
+                   
+                  
+                </ion-item >
+    </ion-list>
+  
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <ion-item>
+        <ion-textarea placeholder="Escribe tu opinion aqui..." ></ion-textarea>
+        <ion-buttons>
+           <ion-button>
+                 <ion-icon  slot="end" name="send" color="dark"></ion-icon>
+           </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-toolbar>
+  </ion-footer>

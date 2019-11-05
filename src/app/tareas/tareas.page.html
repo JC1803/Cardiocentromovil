@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+             </ion-buttons>
+             <ion-buttons slot="start">
+             </ion-buttons>
+      <ion-row>
+          <ion-col size="4" class="centrar">
+             
+                     <ion-title  >Tareas</ion-title>
+          </ion-col>
+          <ion-col size="8">
+              <ion-searchbar mode="ios" animated  showCancelButton="always"></ion-searchbar>
+          </ion-col>
+        </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+    <ion-item>  
+        <ion-label  color="medium">Estado</ion-label>
+        <ion-select interface="popover" [(ngModel)]="tipousuario" okText="Ok" cancelText="Cancelar" name="estadotarea">
+          <ion-select-option value="1">Todas</ion-select-option>
+          <ion-select-option value="2">Terminada</ion-select-option>
+          <ion-select-option value="3">Vencidad</ion-select-option>
+          <ion-select-option value="4">Pendiente</ion-select-option>
+        </ion-select>
+      </ion-item>
+   
+    <div class="bordes"> 
+    <ion-toolbar>
+        <ion-segment  [(ngModel)]="tipo" scrollable (ionChange)="segmentChanged($event)" value="1">
+            <ion-segment-button value="1" checked layout="icon-start">
+              <ion-label class="espacio">Responsable</ion-label>
+              <ion-icon name="person"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="2" layout="icon-start">
+              <ion-label class="espacio">Observador</ion-label>
+              <ion-icon name="search"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="3" layout="icon-start">
+              <ion-label class="espacio">Participante</ion-label>
+              <ion-icon name="contacts"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="4" layout="icon-start">
+                <ion-label class="espacio">Creadas </ion-label>
+                <ion-icon name="hand"></ion-icon>
+              </ion-segment-button>
+          </ion-segment>
+      </ion-toolbar>
+     
+      
+     
+ 
+    <ion-list *ngFor ="let tarea of tareas" >
+        <ion-item class="fuente  bord1">
+              <ion-checkbox slot="start" ></ion-checkbox>
+              <ion-label>
+                <ion-text> 
+                  <ion-label> 
+                      {{tarea.tarea.Nombre}}
+                </ion-label> 
+              </ion-text>
+              <p> <b>Estado: </b>{{ tarea.tarea.Estado_Tarea }} <b>Limite:</b> {{ tarea.tarea.FechaFin}} </p>
+              </ion-label>
+              <ion-buttons slot="end"   (click)="mostrartarea(tarea.Id_Tarea)">
+                  <ion-icon slot="end"  name="eye"></ion-icon>
+                </ion-buttons>
+         </ion-item>
+    </ion-list>
+     
+     
+     <!-- fab placed to the top end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed"  [routerLink]="['/addtareat']">
+      <ion-fab-button color="tertiary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+          </ion-fab>
+        </div>
+</ion-content>
+
+

@@ -1,0 +1,36 @@
+.menu2{
+    padding: 40px 10px 10px;
+    height: 160px;
+    color: rgb(255, 255, 255);
+    .name {
+      text-align: center;
+      margin-top: 3px;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+    .e-mail {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .iavatar1  {     
+    width:300% !important;  
+    height : 300% !important;  
+    max-width: 100px !important;  //any size
+    max-height: 100px !important; //any size 
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 2px solid #0a0458 !important;
+    //padding: .5em;
+    }
+    .form{
+        padding: 16px 40px 16px;
+    }
+    .contorno{
+      padding: 0px 40px 16px;
+    }
+    
+    ion-title{
+      font-family: menu;
+  }

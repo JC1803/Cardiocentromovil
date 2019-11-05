@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar color='tertiary'>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Registro</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label class="textor" padding>  
+  <h1> Crear cuenta nueva </h1>
+ <p> !Empecemos! Ingresa tus datos 
+   para crear una cuenta nueva</p> 
+</ion-label>
+
+ <form  #form="ngForm">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+          
+          </div>
+          <div padding >
+            <ion-item >
+                <ion-icon  slot="start" name="person" color="tertiary"></ion-icon>
+                <ion-input  name="name" type="text" placeholder="Nombre" [(ngModel)]='username'></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon  slot="start" name="person" color="tertiary"></ion-icon>
+                <ion-input  name="apellido" type="text" placeholder="Apellido" [(ngModel)]="apellido"></ion-input>
+            </ion-item>
+            <ion-item class="margenes">
+                <ion-icon  slot="start" name="calendar" color="tertiary"></ion-icon>
+                <ion-label color="medium">Fecha Nacimiento:</ion-label>
+                <ion-input class="margenes" name="fechanac" type="date" placeholder="Fecha Nacimento" [(ngModel)]="fechanac"></ion-input>
+            </ion-item> 
+            <ion-item>
+                <ion-icon  slot="start" name="card" color="tertiary"></ion-icon>
+                <ion-input name="cedula" type="text" placeholder="Cedula" [(ngModel)]="cedula"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon  slot="start" name="mail" color="tertiary"></ion-icon>
+                <ion-input name="email" type="email" placeholder="email" [(ngModel)]='email'></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon  slot="start" name="compass" color="tertiary"></ion-icon>
+                <ion-input name="direccion" type="text" placeholder="Direccion" [(ngModel)]="direccion"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon  slot="start" name="phone-portrait" color="tertiary"></ion-icon>
+                <ion-input name="celular" type="text" placeholder="Numero Movil" [(ngModel)]="celular"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon  slot="start" name="transgender" color="tertiary"></ion-icon>
+                <ion-label color="medium">Sexo:</ion-label>
+                <ion-select class="tama" [(ngModel)]="sexo" placeholder="Seleccione" name="sexo">
+                  <ion-select-option value="Femenino">Femenino</ion-select-option>
+                  <ion-select-option value="Masculino">Masculino</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item >
+                  <ion-icon  slot="start" name="people" color="tertiary"></ion-icon>
+                  <ion-label color="medium">Tipo Usuario:</ion-label>
+                  <ion-select class="tama" placeholder="Seleccione" [(ngModel)]="tipousuario" okText="Ok" cancelText="Cancelar" name="area">
+                    <ion-select-option value="1">Empleado</ion-select-option>
+                    <ion-select-option value="2">Administrador</ion-select-option>
+                  </ion-select>
+            </ion-item>
+
+              <ion-item lines="none">
+                  <ion-icon  slot="start" name="business" color="tertiary"></ion-icon>
+                  <ion-label color="medium">Area:</ion-label>
+                  <ion-select interface="action-sheet" class="tama" (ionChange) = "clicAre($event)" placeholder="Seleccione" [(ngModel)]="area" okText="Ok" cancelText="Cancelar" name="sexo">
+                    <ion-select-option  *ngFor ="let ar of areas"  value= "{{ ar.Id_Area }}" >{{ ar.Descripcion }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                
+
+            <ion-item lines="none" >
+                    <ion-icon  slot="start" name="today" color="tertiary"></ion-icon>
+                    <ion-label color="medium">Subarea:</ion-label>
+                    <ion-select  class="tama" (ionChange) = "clicSuba($event)" placeholder="Seleccione" [(ngModel)]="subarea" okText="Ok" cancelText="Cancelar" name="sexo">
+                      <ion-select-option *ngFor ="let sub of subareas" value="{{ sub.Id_Sub_Area }}">{{ sub.Descripcion }}</ion-select-option>
+                      
+                    </ion-select>
+              </ion-item>
+              <ion-item >
+                      <ion-icon  slot="start" name="briefcase" color="tertiary"></ion-icon>
+                      <ion-label color="medium">Rol:</ion-label>
+                      <ion-select class="tama" placeholder="Seleccione" [(ngModel)]="rol" okText="Ok" cancelText="Cancelar" name="sexo">
+                        <ion-select-option  *ngFor ="let ro of roles" value="{{ ro.Id_Roles}}">{{ ro.Descripcion }}</ion-select-option>
+                      </ion-select>
+              </ion-item>
+              <ion-item>
+              <ion-icon  slot="start" name="lock" color="tertiary"></ion-icon>
+              <ion-input name="password" type="password" placeholder="Password" [(ngModel)]='password'></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon  slot="start" name="lock" color="tertiary"></ion-icon>
+                <ion-input name="confirm" type="password" placeholder="Password again" [(ngModel)]="confirm_password"></ion-input>
+            </ion-item>
+            
+              <ion-item>
+                  <ion-icon  slot="start" name="star" color="tertiary"></ion-icon>
+                  <ion-textarea name="intereses" type="text" placeholder="Escribe tu intereses aqui...." [(ngModel)]="intereses"></ion-textarea>
+              </ion-item>
+            <ion-item-divider lines="none">
+                <ion-label>Social:</ion-label>
+              </ion-item-divider>
+              <ion-item>
+                  <ion-icon slot="start" name="logo-facebook" color="dark"></ion-icon>
+                <ion-input name="facebook"  placeholder="Facebook" [(ngModel)]='facebook'></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-icon slot="start" name="logo-twitter" color="dark"></ion-icon>
+              <ion-input name="twitter"  placeholder="Twitter" [(ngModel)]='twitter'></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-icon slot="start" name="logo-instagram" color="dark"></ion-icon>
+            <ion-input name="instagram" type="email" placeholder="instagram" [(ngModel)]='instagram'></ion-input>
+          </ion-item>
+          </div>
+          <div padding>
+            <ion-button color="primary" fill="outline"  expand="block" type="submit" [disabled]="form.invalid" expand="block" (click)="registro()">Registrar</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+
+
+
+
+

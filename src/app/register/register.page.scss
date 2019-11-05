@@ -1,0 +1,37 @@
+.textor {
+    text-align: center;
+}
+.alertDanger{
+    background-color: white;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    button{
+        color: rgb(17, 163, 73);
+    }
+}
+ .fondo {
+    background-color: rgba(143, 194, 224, 0.979);
+
+ }
+.tama {
+    color: rgb(5, 12, 77);
+    font-size: 85%
+}
+
+.colorb{
+    background-color: #0093d9;
+}
+
+
+
+.margenes {
+    --inner-padding-end: 0px;
+    --inner-padding-start: 0px;
+   --padding-inline-start: 0px;
+   
+
+    color: darkgray;
+        padding: 0px 0px 0px 0px;
+    ion-item{   padding: 0px 0px 0px 0px; }
+  
+}

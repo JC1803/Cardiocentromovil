@@ -1,0 +1,68 @@
+<ion-header>   
+   
+  <ion-toolbar color="light">
+   
+    <ion-buttons slot="start" (click)="closeModal()" >
+      <ion-button> 
+            <ion-icon   slot="start" name="arrow-round-back"></ion-icon>  
+          </ion-button>
+          </ion-buttons>
+    <ion-buttons slot="end">  
+      <ion-button slot="end" fill="outline" color="tertiary" (click)="guardar(id)">Guadar</ion-button>
+    
+    </ion-buttons>
+    </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content>
+  
+    <div class="form3"> 
+  <h1>Agregar Tarea </h1>
+</div>
+
+
+<div class="form2">
+    
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Titulo" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Descripcion" [(ngModel)]="descripcion"></ion-input>
+      </ion-item>
+      <ion-item-divider></ion-item-divider>
+      <ion-item>
+        <ion-label>Fecha Inicio</ion-label>
+        <ion-datetime value="fechai" placeholder="Seleccionar" displayFormat="YYYY-MM-DD" [(ngModel)]="fechai" cancelText = "Cancelar"
+        doneText = "Aceptar" min="2019" max="2100" picker-format="YYYY MMM DD" ></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Hora Inicio</ion-label>
+        <ion-datetime value="horaf"  placeholder="Seleccionar"  display-format="hh:mm" picker-format="hh:mm A"  [(ngModel)]="horai" cancelText = "Cancelar"
+        doneText = "Aceptar"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fecha Fin</ion-label>
+        <ion-datetime  value="fechaf"  placeholder="Seleccionar" displayFormat="YYYY-MM-DD" [(ngModel)]="fechaf"  cancelText = "Cancelar"
+        doneText = "Aceptar" min="2019" max="2200" picker-format="YYYY MMM DD"> ></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Hora Fin</ion-label>
+          <ion-datetime value="horaf"   placeholder="Seleccionar" display-format="hh:mm" picker-format="hh:mm A" [(ngModel)]="horaf" cancelText = "Cancelar"
+          doneText = "Aceptar"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label>Fecha Creacion</ion-label>
+            
+            <ion-datetime  value="creacion" [(ngModel)]="creacion"  displayFormat="YYYY-MM-DD"  disabled></ion-datetime>
+          </ion-item>
+    </ion-list>
+
+    
+
+
+</div>
+</ion-content>

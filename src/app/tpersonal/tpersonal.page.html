@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+            <ion-row>
+                <ion-col size="4" class="centrar">
+                   
+                           <ion-title> Mis Tareas</ion-title>
+                </ion-col>
+                <ion-col size="8">
+                    <ion-searchbar mode="ios" animated  showCancelButton="focus" cancelButtonText="X"></ion-searchbar>
+                </ion-col>
+              </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+    <ion-item>  
+        <ion-label color="medium">Estado</ion-label>
+        <ion-select placeholder="Todas" [(ngModel)]="tipousuario" okText="Ok" cancelText="Cancelar" name="estadotarea">
+          <ion-select-option value="1">Proceso</ion-select-option>
+          <ion-select-option value="2">Terminada</ion-select-option>
+          <ion-select-option value="3">Vencidad</ion-select-option>
+          <ion-select-option value="4">Pendiente</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <div class="form"> 
+          <h2> Tareas Personales </h2> 
+      </div>
+      
+
+<ion-list *ngFor = "let tp of tareasp">
+  
+   
+   
+
+    <ion-item class="bord">
+        <ion-checkbox slot="start" ></ion-checkbox>
+        <ion-label class="ion-text-wrap">
+            <ion-text color="dark">
+            <ion-label> 
+                <h2>{{tp.Nombre}}  </h2>  
+              </ion-label>
+            </ion-text>
+         
+            <p class="letra"> <b> Fecha Fin: </b>{{ tp.FechaFin }} <b>Estado:</b>{{ tp.Estado_Tarea }} </p>
+          </ion-label>
+        <ion-buttons class="botones" slot="end"   (click)="mostrartareap(tp.Id_tarea)">
+            <ion-icon slot="end"  name="eye"></ion-icon>
+          </ion-buttons>
+         
+   </ion-item>
+   
+
+    </ion-list>
+    <div >
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed"  (click)="presentModal(id2)">
+      <ion-fab-button color="tertiary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+          </ion-fab>
+        </div>
+  </ion-content>

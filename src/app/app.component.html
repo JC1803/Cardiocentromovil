@@ -1,0 +1,118 @@
+<ion-app>
+    <ion-menu side="start" name="first" menuId="first" class="my-custom-menu" type="overlay">
+        <ion-content>
+            <div class="menu-header">
+                <!--material-design-background-->
+                <div class="centro"> 
+                      
+                        <ion-avatar align-self-center>
+                            <img class="item-avatar" src="/assets/sinfoto.jpg" (click)="cerrar()" [routerLink]="['/tabs/perfil']" alt="">
+                          </ion-avatar>
+                      
+                              
+                        </div>
+                      <p class="name">{{ datos.Nombre }} {{ datos.Apellido }} </p>
+                      <p class="e-mail">{{ datos.Rol }}</p>
+                   
+              </div>
+
+          <ion-list>
+              <ion-item  class="letra">
+                  <ion-label >
+                   Menú
+                  </ion-label>
+                </ion-item>
+              <ion-item class="letra1" (click)="cerrar()" [routerLink]="['/tabs']">
+                <ion-button shape="round" slot="start">
+                <ion-icon   name="home" color="meniu"></ion-icon>
+              </ion-button >
+                <ion-label>
+                 Home
+                </ion-label>
+              </ion-item>
+            <div  *ngFor="let p of pages"> 
+            <ion-item button  (click)="p.open = !p.open" [class.parent-active]="p.open" class="letra1" detail="false">
+                <ion-icon  slot="start" name="checkbox-outline" color="meniu"></ion-icon>
+              <ion-icon slot="end" name="arrow-dropright" *ngIf="!p.open"></ion-icon>
+              <ion-icon slot="end" name="arrow-dropdown" *ngIf="p.open"></ion-icon>
+              <ion-label>Tareas</ion-label>
+            </ion-item>
+            <div *ngIf="p.open">
+                <ion-menu-toggle>
+                  <ion-item  class="sub-item" [routerLink]="['/tareas']">
+                    <ion-icon name="briefcase" slot="start"color="tertiary"></ion-icon>
+                    <ion-label>
+                     Trabajo
+                    </ion-label>
+                  </ion-item>
+                  <ion-item  class="sub-item" [routerLink]="['/tpersonal']">
+                  <ion-icon name="star" slot="start" color="tertiary"></ion-icon>
+                  <ion-label>
+                   Personal
+                  </ion-label>
+                </ion-item>
+                </ion-menu-toggle>
+              </div>
+          </div>
+
+
+
+            
+            <ion-item  class="letra1" [routerLink]="['/calendario']">
+              <ion-icon slot="start" name="calendar" color="meniu"></ion-icon>
+              <ion-label>
+                Calendario
+              </ion-label>
+            </ion-item>
+            <ion-item class="letra1" [routerLink]="['/planificador']">
+              <ion-icon  slot="start" name="clipboard" color="meniu"></ion-icon>
+              <ion-label>
+               Planificador
+              </ion-label>
+            </ion-item>
+            <ion-item class="letra1" [routerLink]="['/actividades']">
+              <ion-icon  slot="start" name="stats" color="meniu"></ion-icon>
+              <ion-label>
+               Actividades
+              </ion-label>
+            </ion-item>
+            <ion-item  class="letra1" [routerLink]="['/organigrama']">
+              <ion-icon  slot="start" name="people" color="meniu"></ion-icon>
+              <ion-label>
+               Organigrama
+              </ion-label>
+            </ion-item>
+            <ion-item class="letra1" [routerLink]="['/reunion']">
+              <ion-icon  slot="start" name="clock"color="meniu"></ion-icon>
+              <ion-label>
+               Reunion
+              </ion-label>
+            </ion-item >
+            <ion-item class="letra1" [routerLink]="['/archivos']">
+              <ion-icon  slot="start" name="archive"color="meniu"></ion-icon>
+              <ion-label>
+               Archivos
+              </ion-label>
+            </ion-item>
+            <ion-item  class="letra">
+              <ion-label >
+               Sesion
+              </ion-label>
+            </ion-item>
+            <ion-item (click)="cerrar()" [routerLink]="['/login']" lines="none" >
+              <ion-icon  slot="start" name="exit" color="danger"></ion-icon>
+              <ion-label>
+               Logout
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+
+      <ion-router-outlet main></ion-router-outlet>
+
+
+
+  <ion-router-outlet> </ion-router-outlet>
+</ion-app>
+

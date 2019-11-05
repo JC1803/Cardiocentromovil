@@ -1,0 +1,96 @@
+
+  ion-segment-button {
+    --padding-start: unset;
+    --padding-end: unset; 
+    --padding-top: 2px; 
+    --padding-bottom: 2px;   
+   --border-color:#251f81;
+   //--font-size: 12px;
+   //--background-checked: #d3f8f0;
+    --color: #a5b7ac;;
+    --color-checked: #251f81;
+   ion-button {  --max-width: 500px; }
+   ion-label {
+     font-size: smaller;
+   }
+    ion-icon {
+      font-size: 16px;
+    }
+  }
+  .bordes {
+    padding: 5px 10px;
+  }
+
+  .sc-ion-segment-ios-hion-toolbar.sc-ion-segment-ios-s > ion-segment-button, ion-toolbar .sc-ion-segment-ios-h.sc-ion-segment-ios-s > ion-segment-button {
+     max-width: unset;
+     --background-checked: #251f81;;
+     --color-checked: #ffffff;
+    /* font-size: 12px; */
+    /* line-height: 22px; */
+}
+  
+  .espacio {
+    margin: 5px 5px;
+  }
+
+  //es para hacer pequenio el select a la mitad de su tamanio
+ .seleccion {
+   background: darkblue;
+    max-width: 50%;   
+
+
+    ion-button{
+      font-size:10px ;
+    }
+    ion-select {
+      max-width:100%;
+    }
+    
+  
+  }
+  ion-title{
+    font-family: menu;
+    padding:0px 5px 0px  ;
+}
+//centrar texto verticalmente
+.centrar {
+  
+  line-height: 50px;
+  align-items: center;
+}
+
+ion-searchbar {
+ padding: 0px 7px;
+ font-size: 14px;
+ height: 50px;
+}
+
+ion-col{
+  padding: 0px 5px;
+  height: 50px;
+}
+
+.fuente {
+ ion-label{
+  font-size:14px;
+ }
+
+}
+ion-list{
+  padding: 8px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+.bord1{
+  padding-right: 0px;
+  padding-left: 0px;
+p{
+  color: black;
+  font-size: 10px;
+  display: flexbox;
+  margin: 2px 5px 0px 0px;
+  b{
+    font-size: 10px;
+  }
+}
+}
+

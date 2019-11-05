@@ -1,0 +1,48 @@
+<ion-header class="bar-header">
+    <ion-toolbar color="tertiary">
+      <!--ion-title>CARDIOCENTRO MANTA</ion-title-->
+
+<!-- Animated Searchbar -->
+<ion-searchbar mode="ios" animated  showCancelButton="always"></ion-searchbar>
+
+
+
+<!-- Searchbar in a Toolbar -->
+
+    <!--ion-buttons slot="start">
+          <ion-menu-button  menuId="first">  </ion-menu-button>
+      </ion-buttons-->
+        <ion-buttons slot="start">
+         
+          <ion-button  (click)="llamarmenu()">  
+              <ion-icon name="menu" > </ion-icon>
+          </ion-button>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="scroller"> 
+      <ion-tabs>
+          <ion-tab-bar  slot="top">
+              <ion-tab-button class="tab-color" tab="bienvenido">
+                  <ion-icon name="home"></ion-icon>
+                  <ion-label>home</ion-label>
+              </ion-tab-button>
+        
+              <ion-tab-button tab="notificaciones">
+                <ion-icon name="notifications"></ion-icon>
+                <ion-label>Notificaciones</ion-label>
+              </ion-tab-button>
+              <ion-tab-button tab="perfil">
+                <ion-icon name="person"></ion-icon>
+                <ion-label>Perfil</ion-label>
+              </ion-tab-button>
+        </ion-tab-bar>
+        
+        </ion-tabs>
+  </ion-content>
+
+
+
+ 

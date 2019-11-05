@@ -1,0 +1,39 @@
+.organ {
+--background:#1a83c8;
+--background-activated: #71c9ec;
+--color: #ffffff;
+font-size: 14px;
+}
+
+.letra {
+   ion-item{
+    padding: 0px 0px 0px 0px; 
+   }
+    ion-label{
+        font-size: 14px;
+        margin: 5px 0px;
+    }
+   
+}
+
+.cuerpo {
+    padding: 0px 0px 0px 0px; 
+}
+
+.img {
+    width: 200px;
+    height: 100px;
+
+}
+ion-title{
+    font-family: menu;
+}
+
+.fondo {
+   background:#dbe0ea ; 
+   background-size: cover;
+   background-position: center ;
+   height:100%;
+   width: 100%;
+
+}
